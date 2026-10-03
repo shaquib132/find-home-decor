@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
+  color: #1f2a24;
+  background: #f6f1e9;
+  text-rendering: optimizeLegibility;
+}
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; background: #f6f1e9; }
+
+@layer components {
+  .field { @apply w-full rounded-lg border border-sand-300 bg-white px-3.5 py-2.5 text-sm text-ink outline-none transition focus:border-forest-600 focus:ring-4 focus:ring-forest-100; }
+  .btn-primary { @apply inline-flex items-center justify-center gap-2 rounded-lg bg-forest-700 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-forest-800 disabled:opacity-60; }
+  .btn-ghost { @apply inline-flex items-center gap-2 rounded-lg border border-sand-300 bg-white px-3.5 py-2 text-sm font-medium text-ink/70 transition hover:border-forest-600 hover:text-forest-700 disabled:opacity-50; }
+}
